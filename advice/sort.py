@@ -2,10 +2,18 @@ import random
 
 
 def bubble(tmplist):
+    count = 0
     for i in range(len(tmplist)):
+        count += 1
+        flag = True
         for j in range(len(tmplist) - i - 1):
             if tmplist[j] > tmplist[j + 1]:
                 tmplist[j], tmplist[j + 1] = tmplist[j + 1], tmplist[j]
+                flag = False
+        if flag:
+            print('hah', count)
+            return tmplist
+    print(count)
     return tmplist
 
 
@@ -35,5 +43,5 @@ if __name__ == '__main__':
     print(test_tmplist_8)
     sort_list = bubble(test_tmplist_8)
     print(sort_list)
-    for i in range(len(sort_list)-1):
-        assert sort_list[i] < sort_list[i+1]
+    for i in range(len(sort_list) - 1):
+        assert sort_list[i] < sort_list[i + 1], "排序有误"
