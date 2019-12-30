@@ -4,7 +4,7 @@ def triangles():
     r = [1]
     while True:
         yield r
-        r = [1] + [r[i]+r[i+1] for i in range(len(r)-1)] + [1]
+        r = [1] + [r[i] + r[i + 1] for i in range(len(r) - 1)] + [1]
 
 
 n = 0

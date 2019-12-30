@@ -1,3 +1,4 @@
+import cmath
 import random
 
 
@@ -45,3 +46,4 @@ if __name__ == '__main__':
     print(sort_list)
     for i in range(len(sort_list) - 1):
         assert sort_list[i] < sort_list[i + 1], "排序有误"
+
